@@ -1,7 +1,7 @@
 /*
  Project 2 - Array of Objects
- Name: 
- Comments: 
+ Name: Winston Nichols
+ Comments: I made old fashinoned western face
  */
 
 /*** 
@@ -11,16 +11,22 @@
 ***/
 
 // Global Variables go here
+var sprites = new Array(10);
 
 function setup(){
   // this function will run once
   createCanvas(600, 400); // create a 600 x 400 pixel drawing canvas
 
-
+  for(let i = 0; i < sprites.length; i++){
+    sprites[i] = new Sprite(random(width), random(height));
+    console.log(sprites[i]);
+  }
 }
 
 function draw(){
-  background(200); //light gray background
-  
+  background(139, 0, 0); //dark red
+  for(let i = 0; i < sprites.length; i++){
+    sprites[i].display();
+    sprites[i].move();
+   }
 }
-
